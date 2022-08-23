@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options {
+           ansiColor('xterm')
+    }
     parameters {
 
         choice(name: 'ENV', choices: ['', 'prod', 'dev'], description: '')

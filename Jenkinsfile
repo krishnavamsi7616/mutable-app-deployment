@@ -14,7 +14,7 @@ pipeline {
     steps {
     sh '''
          terraform init
-         terraform apply -auto-approve -var COMPONENT=${COMPONENT} -var ENV=${ENV}
+         terraform apply -auto-approve -var COMPONENT=${COMPONENT} -var ENV=${ENV} -parallelism=1
          '''
     }
     }
